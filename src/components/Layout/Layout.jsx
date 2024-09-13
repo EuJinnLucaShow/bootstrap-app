@@ -7,11 +7,32 @@ export default function Layout() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.sideBarWrapper}>
-        <div className={styles.wrapperLink}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/settings">Settings</NavLink>
-          <NavLink to="/users">Users</NavLink>
-        </div>
+        <nav className={styles.wrapperLink}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
+            Settings
+          </NavLink>
+          <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
+            Users
+          </NavLink>
+        </nav>
       </div>
       <div className={styles.contentWrapper}>
         <Suspense fallback={<Loader />}>
