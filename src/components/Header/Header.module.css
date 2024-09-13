@@ -1,4 +1,17 @@
 .wrapper {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
   height: 10vh;
-  background-color: goldenrod;
+  background-color: rgb(172, 147, 84);
+}
+
+.icons {
+  width: 50px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
