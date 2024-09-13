@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Settings from "./pages/Setting/Settings";
 import Users from "./pages/Users/Users";
+import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="settings" element={<Settings />} />
           <Route path="users" element={<Users />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>
